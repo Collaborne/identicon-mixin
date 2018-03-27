@@ -1,6 +1,13 @@
 <script type="text/javascript" src="../jdenticon/dist/jdenticon.min.js"></script>
 <script>
 	var Polymer = Polymer || {};
+	/**
+	 * This mixin create identicon based on (based on jdenticon.com)
+	 *
+	 * @polymer
+	 * @mixinFunction
+	 * @demo demo/index.html
+	 */
 	Polymer.IdenticonMixin = parent => class IdenticonMixin extends parent {
 		generateIdenticon(value, size) {
 			return jdenticon.toSvg(value, size);
