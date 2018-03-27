@@ -1,0 +1,16 @@
+<script type="text/javascript" src="../jdenticon/dist/jdenticon.min.js"></script>
+<script>
+	var Polymer = Polymer || {};
+	Polymer.IdenticonMixin = parent => class IdenticonMixin extends parent {
+		generateIdenticon(value, size) {
+				const canvas = document.createElement('canvas');
+				canvas.width = canvas.height = size;
+				const ctx = canvas.getContext("2d");
+
+				// Copy config to base jdenticon object
+				jdenticon.drawIcon(ctx, value, size, 0.08);
+
+				return canvas.toDataURL();
+			}
+	}
+</script>

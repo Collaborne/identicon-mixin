@@ -1,0 +1,40 @@
+<!doctype html>
+<link rel="import" href="../../polymer/polymer-element.html">
+<link rel="import" href="../identicon-mixin.html">
+
+<dom-module id="identicon-element">
+	<template>
+		<style>
+			#image {
+				width: 100px;
+				height: 100px;
+			}
+		</style>
+		<div id="image"></div>
+	</template>
+
+	<script>
+		class IdenticonElement extends Polymer.IdenticonMixin(Polymer.Element) {
+			static get is() {
+				return 'identicon-element';
+			}
+
+			static get properties() {
+				return {
+					value: {
+						type: String,
+						notify: true,
+						value: 'hello',
+						observer: '_onValueChanged',
+					},
+				};
+			}
+
+			_onValueChanged(value) {
+				const url = this.generateIdenticon(value, 150);
+				this.$.image.style.backgroundImage = `url(${url})`;
+			}
+		}
+		window.customElements.define(IdenticonElement.is, IdenticonElement);
+	</script>
+</dom-module>
