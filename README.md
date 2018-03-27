@@ -12,6 +12,7 @@ To use this mixin:
   <template>
     <link rel="import" href="demo/identicon-element.html">
     <link rel="import" href="../paper-input/paper-input.html">
+    <link rel="import" href="https://raw.githubusercontent.com/dmester/jdenticon/master/dist/jdenticon.min.js">
     <next-code-block></next-code-block>
   </template>
 </custom-element-demo>
