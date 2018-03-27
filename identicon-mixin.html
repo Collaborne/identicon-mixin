@@ -3,14 +3,12 @@
 	var Polymer = Polymer || {};
 	Polymer.IdenticonMixin = parent => class IdenticonMixin extends parent {
 		generateIdenticon(value, size) {
-				const canvas = document.createElement('canvas');
-				canvas.width = canvas.height = size;
-				const ctx = canvas.getContext("2d");
+			return jdenticon.toSvg(value, size);
+		}
 
-				// Copy config to base jdenticon object
-				jdenticon.drawIcon(ctx, value, size, 0.08);
-
-				return canvas.toDataURL();
-			}
+		generateIdenticonDataUrl(value, size) {
+			const svg = this.generateIdenticon(value, size);
+			return `data:image/svg+xml;base64,${btoa(svg)}`;
+		}
 	}
 </script>

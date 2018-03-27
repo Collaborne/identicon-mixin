@@ -31,8 +31,8 @@
 			}
 
 			_onValueChanged(value) {
-				const url = this.generateIdenticon(value, 150);
-				this.$.image.style.backgroundImage = `url(${url})`;
+				const dataUrl = this.generateIdenticonDataUrl(value, 100);
+				this.$.image.style.backgroundImage = `url('${dataUrl}')`;
 			}
 		}
 		window.customElements.define(IdenticonElement.is, IdenticonElement);
