@@ -6,6 +6,7 @@
   ],
   "main": "identicon-mixin.html",
   "license": "Apache-2.0",
+  "homepage": "https://github.com/collaborne/identicon-mixin",  
   "dependencies": {
     "polymer": "Polymer/polymer#^2.0.0",
     "jdenticon": "jdenticon#^2.0.0"
