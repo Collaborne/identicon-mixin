@@ -9,10 +9,16 @@
 	 * @demo demo/index.html
 	 */
 	Polymer.IdenticonMixin = parent => class IdenticonMixin extends parent {
+		/**
+		 * @returns {string} SVG of the identicon
+		 */
 		generateIdenticon(value, size) {
 			return jdenticon.toSvg(value, size);
 		}
 
+		/**
+		 * @returns {string} Data URL of the identicon (base64 encoded SVG)
+		 */
 		generateIdenticonDataUrl(value, size) {
 			const svg = this.generateIdenticon(value, size);
 			return `data:image/svg+xml;base64,${btoa(svg)}`;
