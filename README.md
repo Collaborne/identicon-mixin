@@ -1,3 +1,6 @@
+[![Published on Vaadin  Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/Collaborneidenticon-mixin)
+[![Stars on vaadin.com/directory](https://img.shields.io/vaadin-directory/star/Collaborneidenticon-mixin.svg)](https://vaadin.com/directory/component/Collaborneidenticon-mixin)
+
 # \<identicon-mixin\>
 
 Mixin to create identicon based on (based on jdenticon.com)
